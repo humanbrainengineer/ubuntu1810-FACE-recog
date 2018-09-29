@@ -1,0 +1,40 @@
+1. Open terminal, press Ctrl + Alt + T.
+2. Add Intel server to list of repositories:
+
+
+sudo echo 'deb http://realsense-hw-public.s3.amazonaws.com/Debian/aptrepo xenial main' | sudo tee /etc/apt/sources.list.d/realsensepublic.list
+
+3. Register the servers public key:
+
+sudo apt-key adv --keyserver keys.gnupg.net --recv-key 6F3EFCDE
+
+4. Refresh the list of repositories and packages available:
+sudo apt-get update
+
+5. Install the intel-realsense-dfu package:
+sudo apt-get install intel-realsense-dfu* 
+
+
+6. Download latest D400 series firmware .bin file (Signed Binary):
+i. Click on this link:
+https://downloadcenter.intel.com/download/27522/Latest-Firmwarefor-Intel-RealSense-D400-Product-Family?v=t
+
+下载最新的固件：当前已经安装固件是： 5.10.3  from   Date: 8/20/2018
+
+7. Plug in D400 Series camera to host USB3.1 port. Check serial # and bus#. type:
+i. Type: lsusb [Enter]
+ii. Notice “Intel Corp.” bus and device numbers; DFU tool uses these
+values to identify Intel® RealSense™ D400 series camera. 
+
+
+
+-----------------------
+
+8.  sudo intel-realsense-dfu -b busNO -d deviceNO -f -i /zz/***.bin
+
+9.  Check the version:
+ sudo intel-realsense-dfu -p
+ 
+ printout info: 5.10.3
+ 
+ 
