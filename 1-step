@@ -1,0 +1,144 @@
+支持 exfat格式：
+
+sudo apt-get install exfat-fuse exfat-utils
+
+
+1-step：------------- ----------------- ----------------
+
+2.安装驱动装备工作
+
+ ubuntu自带的nouveau驱动会影响cuda安装，不当操作会导致黑屏和登陆循环。终端运行
+
+lsmod | grep nouveau
+
+若有输出，则
+
+cd /etc/modprobe.dsudo touch blacklist-nouveau.confsudo gedit blacklist-nouveau.conf
+
+ 
+
+在打开的文件中输入
+
+ 
+
+blacklist nouveau  
+options nouveau modeset=0 
+
+ 
+
+保存退出，然后
+
+ 
+
+sudo update-initramfs -u
+
+ 
+
+一定要重启，再用终端检测一下
+
+ 
+
+lsmod | grep nouveau
+
+ 
+
+没有输出，恭喜你，可以进入下一步
+
+---------------------
+
+2-step：------------- ----------------- ----------------
+
+卸载掉原有驱动
+
+sudo apt-get remove --purge nvidia-*
+
+ 
+
+ CTRL + ALT + F1进入字符界面，关闭图形界面，一定要这么做，所以在驱动安装完成前，建议把以下几步记下来
+=====
+
+1. 关闭用户图形界面
+
+sudo systemctl set-default multi-user.target
+sudo reboot12
+
+
+
+2. 开启用户图形界面
+
+sudo systemctl set-default graphical.target
+sudo reboot
+
+=====
+ 
+
+sudo service lightdm stop
+
+ 
+
+安装nvidia驱动，其中 -no-opengl-files 是必须的，其他两个可以不用敲
+
+ 
+
+sudo chmod a+x NVIDIA-Linux-x86_64-396.18.run //获取权限
+sudo ./NVIDIA-Linux-x86_64-396.18.run –no-x-check –no-nouveau-check –no-opengl-files //安装驱动
+
+-------------------------------------
+测试：
+按Enter键，直到完成。重启，登录，命令行输入
+nvidia-smi
+
+
+显卡驱动到此，安装完毕。
+-------------------------------------
+
+
+
+3.  安装cuda-10
+
+安装CUDA9.2
+
+进入下载的文件路径
+
+sudo sh cuda_9.2.88_396.26_linux.run
+出现说明之后，按Ctrl + C键跳过，接受之后会问你是否需要安装驱动，选择无，其余选择是直至安装完成。
+
+----安装结束--拍照。
+
+
+
+2.1 测试 cuda 样本
+
+sudo apt-get install cmake 
+sudo apt-get install g++
+
+cd sample 
+sudo make
+./Devicequery
+
+结果 显示 OK。
+
+Cuda 安装成功完毕。
+
+
+----另外：
+
+如果需要卸载重装，运行下列命令卸载 cuda 
+
+$ cd /usr/local/cuda/bin
+$ sudo ./uninstall_cuda_9.2.pl
+-------------------------------------------------------
+
+
+4. step ---------  -----------  -----------  ----------  -----------
+
+
+
+
+
+
+
+
+
+
+  
