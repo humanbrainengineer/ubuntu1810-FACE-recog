@@ -132,7 +132,51 @@ $ sudo ./uninstall_cuda_9.2.pl
 
 4. step ---------  -----------  -----------  ----------  -----------
 
+第一，安装cuDNN
 
+第二：
+
+安装 以下3文件，和  cuDNN 是同一的下载页面。
+
+
+Navigate to your <cudnnpath> directory containing cuDNN Debian file.
+Install the runtime library, for example:
+  sudo dpkg -i libcudnn7_7.0.3.11-1+cuda9.0_amd64.deb
+  
+Install the developer library, for example:
+  sudo dpkg -i libcudnn7-dev_7.0.3.11-1+cuda9.0_amd64.deb
+  
+Install the code samples and the cuDNN Library User Guide, for example:
+  sudo dpkg -i libcudnn7-doc_7.0.3.11-1+cuda9.0_amd64.deb
+
+
+第三：
+
+插入 环境 变量：
+
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64"
+export CUDA_HOME=/usr/local/cuda
+
+
+------- --------
+2.4. Verifying
+To verify that cuDNN is installed and is running properly, compile the mnistCUDNN sample located in the /usr/src/cudnn_samples_v7 directory in the debian file.
+
+Copy the cuDNN sample to a writable path.
+  $cp -r /usr/src/cudnn_samples_v7/ $HOME
+  
+Go to the writable path.
+  $ cd  $HOME/cudnn_samples_v7/mnistCUDNN
+  
+Compile the mnistCUDNN sample.  
+  $make clean && make
+
+Run the mnistCUDNN sample.
+  $ ./mnistCUDNN
+  
+  
+If cuDNN is properly installed and running on your Linux system, you will see a message similar to the following:
+Test passed!
 
 
 
