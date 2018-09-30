@@ -40,9 +40,9 @@ sudo update-initramfs -u
 
 一定要重启，再用终端检测一下
 
- 
+此时重启后，解析度已经降低。
 
-lsmod | grep nouveau
+sudo lsmod | grep nouveau
 
  
 
@@ -58,13 +58,13 @@ sudo apt-get remove --purge nvidia-*
 
  
 
- CTRL + ALT + F1进入字符界面，关闭图形界面，一定要这么做，所以在驱动安装完成前，建议把以下几步记下来
+ 这一句在 ubuntu1804已经无效：CTRL + ALT + F1进入字符界面，关闭图形界面，一定要这么做，所以在驱动安装完成前，建议把以下几步记下来
 =====
 
 1. 关闭用户图形界面
 
 sudo systemctl set-default multi-user.target
-sudo reboot12
+sudo reboot
 
 
 
@@ -100,11 +100,11 @@ nvidia-smi
 
 3.  安装cuda-10
 
-安装CUDA9.2
+安装CUDA10
 
 进入下载的文件路径
-
-sudo sh cuda_9.2.88_396.26_linux.run
+sudo chmod a+x cuda_9.2.88_396.26_linux
+sudo sh cuda_9.2.88_396.26_linux
 出现说明之后，按Ctrl + C键跳过，接受之后会问你是否需要安装驱动，选择无，其余选择是直至安装完成。
 
 ----安装结束--拍照。
@@ -116,9 +116,12 @@ sudo sh cuda_9.2.88_396.26_linux.run
 sudo apt-get install cmake 
 sudo apt-get install g++
 
+
+cd /usr/local/cuda
+cd 1_Utilities
 cd sample 
 sudo make
-./Devicequery
+./devicequery
 
 结果 显示 OK。
 
@@ -152,6 +155,12 @@ Install the developer library, for example:
   
 Install the code samples and the cuDNN Library User Guide, for example:
   sudo dpkg -i libcudnn7-doc_7.0.3.11-1+cuda9.0_amd64.deb
+
+
+
+sudo systemctl set-default graphical.target
+sudo reboot
+此时 解析度变回正常。并且能搜索软件： nvidia x server settings 软件
 
 
 第三：
