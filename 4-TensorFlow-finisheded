@@ -1,3 +1,11 @@
+6.下载编译tensorflow
+
+git clone https://github.com/tensorflow/tensorflow.git
+cd tensorflow
+git pull
+git checkout r1.10 #此处可以将1.10换成您想安装的任意版本
+
+
 ./configure
 
 
