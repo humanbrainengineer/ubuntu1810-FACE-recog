@@ -13,7 +13,11 @@ lsmod | grep nouveau
 
 若有输出，则
 
-cd /etc/modprobe.dsudo touch blacklist-nouveau.confsudo gedit blacklist-nouveau.conf
+cd /etc/modprobe.d
+
+sudo touch blacklist-nouveau.conf
+
+sudo gedit blacklist-nouveau.conf
 
  
 
