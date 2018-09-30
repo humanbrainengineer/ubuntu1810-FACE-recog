@@ -28,6 +28,15 @@ the following command will upgrade CUDA to the latest version.
 以上尝试过，不过还是有点问题：  解决为   下载那个 os
 
 
+NCCL 2.3.5 O/S agnostic and CUDA 10.0  是个压缩包
+
+cp -R 里面的文件：
+
+  221  cd nccl_2.3.5-2+cuda10.0_x86_64/
+ 
+  223  sudo cp -R include/ lib/ /usr/local/cuda
+  
+  就ok。
 
 
 ------------------------------------------------------
