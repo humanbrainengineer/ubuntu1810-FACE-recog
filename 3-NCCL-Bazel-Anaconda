@@ -60,3 +60,37 @@ Once installed, you can upgrade to a newer version of Bazel with the following c
   
   
   -----------------------------------------------
+ 以上的方法安装不太顺利：
+ 下面试源代码：
+  https://github.com/bazelbuild/bazel/releases/
+ 
+and then :
+download the : bazel-0.17.2-dist.zip    75.6 MB
+
+
+Following:  https://docs.bazel.build/versions/master/install-compile-source.html
+
+3. Bootstrap Bazel
+Ubuntu Linux, macOS, and other Unix-like systems
+Open a shell or Terminal window.
+
+Change into the directory where you unpacked the distribution archive.
+
+Run the compilation script: bash ./compile.sh.
+
+The compiled output is placed into output/bazel. 
+This is a self-contained Bazel binary, without an embedded JDK.
+You can copy it to a directory in the PATH variable (such as /usr/local/bin on Linux) or use it in-place.
+  
+  
+  
+  
+  Part-3
+  
+  Install Anaconda:
+  https://www.anaconda.com/download/#linux  
+  
+  download:  Python 3.6 version  ---- 64-Bit (x86) Installer (622 MB)  是个脚本sh文件。
+  
+  
+  
