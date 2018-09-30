@@ -1,0 +1,62 @@
+NCCL:  
+
+download:  https://developer.nvidia.com/nccl/nccl-download
+
+1:
+https://docs.nvidia.com/deeplearning/sdk/nccl-install-guide/index.html#down
+
+---3.1. Ubuntu 14.04 LTS And Ubuntu 16.04 LTS
+Installing NCCL on Ubuntu requires you to first add a repository to the APT system containing the NCCL packages, 
+then installing the NCCL packages through APT.
+There are two repositories available; a local repository and a network repository. 
+Choosing the later is recommended to easily retrieve upgrades when newer versions are posted.
+Install the repository.
+For the local NCCL repository:
+  sudo dpkg -i nccl-repo-<version>.deb
+
+Update the APT database:
+  sudo apt update
+Install the libnccl2 package with APT. 
+
+
+Additionally, if you need to compile applications with NCCL, 
+you can install the libnccl-dev package as well:
+Note: If you are using the network repository, 
+the following command will upgrade CUDA to the latest version.
+  sudo apt install libnccl2 libnccl-dev
+-------------------------------------------------------
+以上尝试过，不过还是有点问题：  解决为   下载那个 os
+
+
+
+
+------------------------------------------------------
+Bazel:
+
+Using Bazel custom APT repository
+Step 1: Install the JDK
+Install JDK 8:
+  
+   sudo apt-get install openjdk-8-jdk
+
+Step 2: Add Bazel distribution URI as a package source
+Note: This is a one-time setup step.
+
+   echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
+   
+   sudo apt install curl
+
+   curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
+   
+   
+
+Step 3: Install and update Bazel
+
+
+  sudo apt-get update && sudo apt-get install bazel
+Once installed, you can upgrade to a newer version of Bazel with the following command:
+
+  sudo apt-get upgrade bazel
+  
+  
+  -----------------------------------------------
