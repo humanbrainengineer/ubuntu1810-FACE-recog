@@ -38,7 +38,7 @@ options nouveau modeset=0
 
 sudo update-initramfs -u
 
- 
+ ！@@@@@@@@@@@@@@@@@@@@@在这里，已经可以做  sudo systemctl set-default multi-user.target  这一步
 
 一定要重启，再用终端检测一下
 
