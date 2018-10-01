@@ -100,14 +100,32 @@ nvidia-smi
 
 
 
-3.  安装cuda-10
+3.  安装cuda-9.0
 
-安装CUDA10
+检查这个和Ubuntun 18.04上的gcc版本，我们决定降低我们的gcc版本。
+gcc --version   # check ubuntu 18.04 gcc version, you will find it's 7.3.0
+sudo apt install gcc-5 g++-5
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 50   # you will find that message that tells you the gcc-5 is set to be automatic.
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 50   # similiar message as gcc
+
+---------------------
+
+本文来自 代码湾 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/B9Q8e64lO6mm/article/details/81117285?utm_source=copy 
+
+安装CUDA9.0
 
 进入下载的文件路径
 sudo chmod a+x cuda_9.2.88_396.26_linux
-sudo sh cuda_9.2.88_396.26_linux
+sudo sh cuda_9.2.88_396.26_linux   or ./cuda.......
 出现说明之后，按Ctrl + C键跳过，接受之后会问你是否需要安装驱动，选择无，其余选择是直至安装完成。
+
+
+补丁1~补丁4
+
+chmod 777 -R /usr/local/cuda-9.0/
+sudo chmod a+x patch1
+./cuda_9.2.88_396.26_linux-patch1-etc  or ./cuda.......
+
 
 ----安装结束--拍照。
 
@@ -116,12 +134,14 @@ sudo sh cuda_9.2.88_396.26_linux
 2.1 测试 cuda 样本
 
 sudo apt-get install cmake 
-sudo apt-get install g++
+这句不需要：  之前已经使用了g++ 5.0  sudo apt-get install g++
 
 
 cd /usr/local/cuda
-cd 1_Utilities
+
 cd sample 
+cd 1_Utilities
+
 sudo make
 ./devicequery
 
