@@ -19,6 +19,8 @@ sudo touch blacklist-nouveau.conf
 
 sudo gedit blacklist-nouveau.conf
 
+sudo nano blacklist-nouveau.conf
+
  
 
 在打开的文件中输入
