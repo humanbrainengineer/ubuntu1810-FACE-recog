@@ -1,5 +1,9 @@
 支持 exfat格式：
+sudo apt-get install exfat-fuse exfat-utils
 
+
+
+----------------------------------------------------
 
 检查这个和Ubuntun 18.04上的gcc版本，我们决定降低我们的gcc版本。
 gcc --version   # check ubuntu 18.04 gcc version, you will find it's 7.3.0
@@ -9,7 +13,7 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 50   # simili
 
 -------------------------------------------------
 
-sudo apt-get install exfat-fuse exfat-utils
+
 
 
 1-step：------------- ----------------- ----------------
