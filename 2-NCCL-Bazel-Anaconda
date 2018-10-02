@@ -40,7 +40,7 @@ cp -R 里面的文件：
 
 
 ------------------------------------------------------
-Bazel:
+Bazel:    看第二种方法  --以下。
 
 Using Bazel custom APT repository
 Step 1: Install the JDK
