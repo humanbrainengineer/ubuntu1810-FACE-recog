@@ -85,18 +85,20 @@ Open a shell or Terminal window.
 
 Change into the directory where you unpacked the distribution archive.
 
-Run the compilation script: bash ./compile.sh.
+Run the compilation script: 
+  bash ./compile.sh.
 
-The compiled output is placed into output/bazel. 
+The compiled output is placed into : output/bazel. 
 This is a self-contained Bazel binary, without an embedded JDK.
 You can copy it to a directory in the PATH variable (such as /usr/local/bin on Linux) or use it in-place.
+  sudo cp output/bazel /usr/local/bin
   
   
   
   
   Part-3
   
-  Install Anaconda:
+  Install Anaconda:  下载最新版本即可
   https://www.anaconda.com/download/#linux  
   
   download:  Python 3.6 version  ---- 64-Bit (x86) Installer (622 MB)  是个脚本sh文件。
