@@ -149,7 +149,7 @@ cd /usr/local/cuda
 
 cd sample 
 cd 1_Utilities
-
+cd devicequery
 sudo make
 ./devicequery
 
