@@ -103,5 +103,12 @@ You can copy it to a directory in the PATH variable (such as /usr/local/bin on L
   
   download:  Python 3.6 version  ---- 64-Bit (x86) Installer (622 MB)  是个脚本sh文件。
   
+ 执行：
+  
+  
+  bash ./Anaconda3-5.0.0-Linux-x86_64.sh
+  
+  然后等它完成。
+  
   
   
