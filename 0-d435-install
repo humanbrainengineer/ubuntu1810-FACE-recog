@@ -9,6 +9,8 @@ Just finished the above all step 2.
 2nd:
 https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md
 
+after above commands and reboot ：normally
+
 3rd：SDK 2.0 (build 2.16.1)
 https://github.com/IntelRealSense/librealsense/releases
 
