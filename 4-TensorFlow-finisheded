@@ -1,6 +1,6 @@
-6.下载编译tensorflow
+6.下载编译tensorflow r1.11版本
 
-git clone https://github.com/tensorflow/tensorflow.git
+dowload the r1.11本本的压缩包zip
 cd tensorflow
 git pull
 git checkout r1.10 #此处可以将1.10换成您想安装的任意版本
