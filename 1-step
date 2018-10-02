@@ -171,6 +171,17 @@ $ sudo ./uninstall_cuda_9.2.pl
 
 第一，安装cuDNN       https://developer.nvidia.com/rdp/cudnn-download  下载for cuda9.0
 
+
+2.3.1. Installing from a Tar File
+Navigate to your <cudnnpath> directory containing the cuDNN Tar file.
+Unzip the cuDNN package.
+$ tar -xzvf cudnn-9.0-linux-x64-v7.tgz
+Copy the following files into the CUDA Toolkit directory, and change the file permissions.
+$ sudo cp cuda/include/cudnn.h /usr/local/cuda/include
+$ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
+$ sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
+
+
 第二：
 
 安装 以下3文件，和  cuDNN 是同一的下载页面。
