@@ -1,5 +1,14 @@
 支持 exfat格式：
 
+
+检查这个和Ubuntun 18.04上的gcc版本，我们决定降低我们的gcc版本。
+gcc --version   # check ubuntu 18.04 gcc version, you will find it's 7.3.0
+sudo apt install gcc-5 g++-5
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 50   # you will find that message that tells you the gcc-5 is set to be automatic.
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 50   # similiar message as gcc
+
+-------------------------------------------------
+
 sudo apt-get install exfat-fuse exfat-utils
 
 
@@ -102,11 +111,6 @@ nvidia-smi
 
 3.  安装cuda-9.0
 
-检查这个和Ubuntun 18.04上的gcc版本，我们决定降低我们的gcc版本。
-gcc --version   # check ubuntu 18.04 gcc version, you will find it's 7.3.0
-sudo apt install gcc-5 g++-5
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 50   # you will find that message that tells you the gcc-5 is set to be automatic.
-sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 50   # similiar message as gcc
 
 ---------------------
 
