@@ -204,10 +204,11 @@ Install the code samples and the cuDNN Library User Guide, for example:
   sudo dpkg -i libcudnn7-doc_7.0.3.11-1+cuda9.0_amd64.deb
 
 
-
+以下可略：
 sudo systemctl set-default graphical.target
 sudo reboot
 此时 解析度变回正常。并且能搜索软件： nvidia x server settings 软件
+-----------------------------------
 
 
 第三：
