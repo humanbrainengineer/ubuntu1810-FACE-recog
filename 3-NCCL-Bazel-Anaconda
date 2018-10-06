@@ -1,4 +1,4 @@
-NCCL:  安装成功tensorflow那次，没有用这nccl和bazel
+NCCL: 是用在双显卡--- 安装成功tensorflow那次，没有用这nccl和bazel
 
 
 download:  https://developer.nvidia.com/nccl/nccl-download
