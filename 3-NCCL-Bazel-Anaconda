@@ -1,4 +1,5 @@
-NCCL:  
+NCCL:  安装成功tensorflow那次，没有用这nccl和bazel
+
 
 download:  https://developer.nvidia.com/nccl/nccl-download
 
