@@ -1,34 +1,34 @@
-https://www.cnblogs.com/hutao722/p/9342577.html
+
+Check:
+---python3 --version
+---pip3 --version
+---virtualenv --version
+
+then:
+
+sudo apt update
+sudo apt install python3-dev python3-pip
+sudo pip3 install -U virtualenv  # system-wide install
+
+Part 1--- Only for env
+env:
+virtualenv --system-site-packages -p python3 ./venv
+source ./venv/bin/activate 
+
+env:pip install --upgrade pip
+env:pip list
+env:deactivate
 
 
-　　6. 安装tensorflow-gpu
+Part 1.1 ---
 
-　　官方推荐通过Virtualenv来安装tensorflow-gpu，来进行项目隔离，这是在开发环境，如果在生产环境，可以走docker方式来部署。这里采用Virtualenv方式来安装，执行如下命令：
+env: pip install --upgrade tensorflow
+env: python -c "import tensorflow as tf; tf.enable_eager_execution(); print(tf.reduce_sum(tf.random_normal([1000, 1000])))"
 
-sudo apt-get install python3
-sudo apt-get install python3-pip python3-dev python-virtualenv
- 
 
-　　安装完pip3、virtualenv后，可进入virtualenv安装tensorflow-gpu，执行如下命令：
+Part 1.2 ---    Only for system.
 
-mkdir -p ~/tensorflow/venv
-virtualenv -p python3 ~/tensorflow/venv #创建virtualenv环境
-cd ~/tensorflow/venv
-source bin/activate #环境用的时候需要激活
-pip3 install --index-url http://pypi.douban.com/simple --trusted-host pypi.douban.com --upgrade tensorflow-gpu #采用国内源下载tensorflow-gpu
-　　最后通过 pip3 show tensorflow-gpu 可检查tensorflow-gpu的安装路径是否在该虚拟环境内，以隔绝与全局的site-packages
+System: 
+pip3 install --user --upgrade tensorflow  #!!! install in $HOME
+python3 -c "import tensorflow as tf; tf.enable_eager_execution(); print(tf.reduce_sum(tf.random_normal([1000, 1000])))"
 
- 
-
-　　7. 检查结果
-
-　　还是在上述virtualenv创建的根目录下，执行如下命令：　　
-
-mkdir src && cd src
-　　vi hello_tensorflow.py，内容如下：　　
-
-import tensorflow as tf
-hello = tf.constant('Hello, TensorFlow!')
-sess = tf.Session()
-print(sess.run(hello))
-　　最后执行该脚本：python3 hello_tensorflow.py 即可得到包含有GPU输出信息的正确结果 　
