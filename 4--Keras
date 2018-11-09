@@ -1,1 +1,45 @@
-1
+https://www.cnblogs.com/followmejoy-LM/p/9634679.html
+
+Ubuntu16.04下keras安装
+Installation
+Before installing Keras, please install one of its backend engines: TensorFlow, Theano, or CNTK. We recommend the TensorFlow backend.
+
+TensorFlow installation instructions. （已安装）
+Theano installation instructions.
+CNTK installation instructions.
+You may also consider installing the following optional dependencies:
+
+cuDNN (recommended if you plan on running Keras on GPU). （已安装）
+HDF5 and h5py (required if you plan on saving Keras models to disk). （sudo pip install h5py)
+graphviz and pydot (used by visualization utilities to plot model graphs). (sudo apt install python-pydot python-pydot-ng graphviz )
+Then, you can install Keras itself. There are two ways to install Keras:
+
+Install Keras from PyPI (recommended):
+sudo pip install keras
+If you are using a virtualenv, you may want to avoid using sudo: (在创建的tensorflow虚拟环境下安装）
+
+pip install keras
+
+--------------------------------------------------
+
+
+1.Install Openmpi :
+
+sudo apt-get install openmpi-bin openmpi-doc libopenmpi-dev
+
+
+2. pip3 install h5py   // to control the HDF5 files.
+
+
+3.graphviz : Download Page for graphviz_2.40.1-2_amd64.deb on AMD64 machines
+   get https://packages.ubuntu.com/      ,which is deb package.
+   
+   
+4. pip3 install pydot
+   
+   
+Final check :    sudo apt install python-pydot python-pydot-ng graphviz
+
+
+5. sudo pip3 install keras
+
