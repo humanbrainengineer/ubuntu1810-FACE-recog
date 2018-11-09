@@ -1,0 +1,28 @@
+
+From:
+
+https://docs.microsoft.com/en-us/cognitive-toolkit/setup-linux-python?tabs=cntkpy26#2-install-from-wheel-files
+
+------
+
+
+apt-get update
+
+
+apt-get install python3.6
+
+
+------
+
+sudo apt-get install openmpi-bin
+pip3 install <url> https://cntk.ai/PythonWheel/GPU/cntk_gpu-2.6-cp36-cp36m-linux_x86_64.whl
+
+TEST:
+
+python3 -c "import cntk; print(cntk.__version__)"
+
+
+It is OKay!
+
+2018-11-08
+but it still is not support the ubuntu18.04.
