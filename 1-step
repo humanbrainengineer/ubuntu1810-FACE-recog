@@ -2,6 +2,7 @@
 sudo apt-get install exfat-fuse exfat-utils
 
 
+一定要把移动硬盘的所有驱动软件放在 /zz
 
 
 
