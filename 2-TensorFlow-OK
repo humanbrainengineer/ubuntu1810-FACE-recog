@@ -25,13 +25,13 @@ env:deactivate
 
 Part 1.1 ---
 
-env: pip install --upgrade tensorflow
+env: pip install --upgrade tensorflow-gpu   //you also can choose pip install --upgrade tensorflow
 env: python -c "import tensorflow as tf; tf.enable_eager_execution(); print(tf.reduce_sum(tf.random_normal([1000, 1000])))"
 
 
 Part 1.2 ---    Only for system.
 
 System: 
-pip3 install --user --upgrade tensorflow  #!!! install in $HOME
+pip3 install --user --upgrade tensorflow-gpu  #!!! install in $HOME
 python3 -c "import tensorflow as tf; tf.enable_eager_execution(); print(tf.reduce_sum(tf.random_normal([1000, 1000])))"
 
