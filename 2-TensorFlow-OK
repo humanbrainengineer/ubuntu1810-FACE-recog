@@ -4,6 +4,9 @@ Check:
 ---pip3 --version
 ---virtualenv --version
 
+
+
+                                         https://www.tensorflow.org/install/pip
 then:
 
 sudo apt update
