@@ -90,7 +90,8 @@ sudo service lightdm stop
 
 安装nvidia驱动，其中 -no-opengl-files 是必须的，其他两个可以不用敲
 
- 
+sudo apt-get install gcc g++ make
+以上没有指定版本
 
 sudo chmod a+x NVIDIA-Linux-x86_64-396.18.run //获取权限
 sudo ./NVIDIA-Linux-x86_64-396.18.run –no-x-check –no-nouveau-check –no-opengl-files //安装驱动
