@@ -1,7 +1,7 @@
 Install:
 
 pip3 install tensorboard
-
+apt install geany
 
 
 
@@ -12,6 +12,7 @@ https://blog.csdn.net/sinat_20729643/article/details/78683677
 
 
 ------------------------------------------!!
+Name: filename.py
 
 import tensorflow as tf
 
@@ -34,5 +35,5 @@ writer.close()
 ------------------------------------------
 
 Test:
-
+python3 filename.py
 tensorboard --logdir=/home/eth/logfile2           //2 ge dizhi shi yi yang de.
