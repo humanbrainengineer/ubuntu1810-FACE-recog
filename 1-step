@@ -235,6 +235,23 @@ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64"
 export CUDA_HOME=/usr/local/cuda
 
 
+-----------------------
+or  nano ~/.bashrc
+
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64
+export PATH=$PATH:/usr/local/cuda-9.0/bin
+export CUDA_HOME=$CUDA_HOME:/usr/local/cuda-9.0
+
+
+
+--------------------- 
+作者：ZeroZone零域 
+来源：CSDN 
+原文：https://blog.csdn.net/ksws0292756/article/details/80034086 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+
+
 ------- --------
 2.4. Verifying
 To verify that cuDNN is installed and is running properly, compile the mnistCUDNN sample located in the /usr/src/cudnn_samples_v7 directory in the debian file.
