@@ -79,7 +79,7 @@ python examples/mnist_cnn.py
 用率。
 
 
-$ watch -n 5 NVIDIA-smi -a --display=utilization
+$ watch -n 5 nvidia-smi -a --display=utilization
 一切安装完成，恭喜你！现在可以开始构建深度学习应用了。
 
 
