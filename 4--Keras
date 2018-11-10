@@ -40,8 +40,58 @@ sudo apt-get install openmpi-bin openmpi-doc libopenmpi-dev
    
 Final check :    sudo apt install python-pydot python-pydot-ng graphviz
 
+----------------------------------------
 
 5. sudo pip3 install keras
 
 Test： 
 KERAS_BACKEND=tensorflow python -c "from keras import backend"
+
+----------------------------------------
+
+6. 
+
+可以从PyPI 安装Keras。
+
+$ sudo pip install keras
+或者也可以从GitHub 安装Keras。这么做的话，就可以访问keras/examples 文件夹，里面
+包含许多示例脚本供你学习。
+$ git clone https://github.com/fchollet/keras
+$ cd keras
+$ sudo python setup.py install
+现在你可以尝试运行一个Keras 脚本，比如这个MNIST 示例。
+python examples/mnist_cnn.py
+
+注意，完整运行这个示例可能需要几分钟。因此，在确认Keras 可以正常运行之后，你可
+以随时强制退出（按Ctrl-C）。
+运行Keras 至少一次之后，就可以在~/.keras/keras.json 找到Keras 的配置文件。你可以编
+辑这个文件，选择运行Keras 的后端：tensorflow、theano 或cntk。你的配置文件应该是
+这样的。
+{
+"image_data_format": "channels_last",
+"epsilon": 1e-07,
+"floatx": "float32",
+"backend": "tensorflow"
+}
+
+
+运行examples/mnist_cnn.py 这个Keras 脚本时，你可以在另一个shell 窗口中监控GPU 利
+用率。
+
+
+$ watch -n 5 NVIDIA-smi -a --display=utilization
+一切安装完成，恭喜你！现在可以开始构建深度学习应用了。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
