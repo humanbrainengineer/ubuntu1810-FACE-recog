@@ -1,0 +1,18 @@
+我已经有账号： 查看 apple 云笔记。
+
+下载： professional 版本。
+输入登陆： 账号登陆。（已经有一年的了）
+
+
+
+https://blog.csdn.net/spadgerz/article/details/79551339
+
+
+1.打开PyCharm软件, 进入File->Settings目录
+
+2.在Project Interpreter一行点击“设置”按钮
+
+3.选择Add Local，添加本地环境
+
+反正：将 Project Interpteter 选择为自己安装了tensorflow 的 Python版本，就会显示之前所有安装的软件  ，如TensorFlow 和 TensorFlow GPU。
+
