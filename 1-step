@@ -5,8 +5,7 @@ Tensorflow 无论什么版本，都只支持cuda9.0.      而cuda9.0 要搭配  
 
 ------------------------------------------------------
 
-支持 exfat格式：
-sudo apt-get install exfat-fuse exfat-utils
+
 
 
 一定要把移动硬盘的所有驱动软件放在 /zz
