@@ -52,15 +52,19 @@ KERAS_BACKEND=tensorflow python -c "from keras import backend"
 6. 
 
 可以从PyPI 安装Keras。
+sudo apt-get install git
 
-$ sudo pip install keras
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@ option!!! :   $ sudo pip install keras @@@@@@@@@@@@@@@@@@@@@@@@@ 
 或者也可以从GitHub 安装Keras。这么做的话，就可以访问keras/examples 文件夹，里面
 包含许多示例脚本供你学习。
 $ git clone https://github.com/fchollet/keras
 $ cd keras
-$ sudo python setup.py install
+$ sudo python3.6 setup.py install
 现在你可以尝试运行一个Keras 脚本，比如这个MNIST 示例。
-python examples/mnist_cnn.py
+python(3.6) examples/mnist_cnn.py
+
 
 注意，完整运行这个示例可能需要几分钟。因此，在确认Keras 可以正常运行之后，你可
 以随时强制退出（按Ctrl-C）。
