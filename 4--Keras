@@ -33,7 +33,7 @@ sudo apt-get install openmpi-bin openmpi-doc libopenmpi-dev
 
 3.graphviz : Download Page for graphviz_2.40.1-2_amd64.deb on AMD64 machines
    get https://packages.ubuntu.com/      ,which is deb package.
-   
+   检测已经安装完graphviz:      pip3 install graphviz   
    
 4. pip3 install pydot
    
