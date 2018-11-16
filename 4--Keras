@@ -40,9 +40,12 @@ sudo apt-get install openmpi-bin openmpi-doc libopenmpi-dev
    
 Final check :    sudo apt install python-pydot python-pydot-ng graphviz
 
+
+
+
 ----------------------------------------
 
-5. sudo pip3 install keras
+5. sudo pip3 install keras   （看第六步！！！！）
 
 Test： 
 KERAS_BACKEND=tensorflow python -c "from keras import backend"
