@@ -1,0 +1,46 @@
+0. https://github.com/foamliu/FaceNet
+   click the:  Download the ZIP.
+   
+   
+1. cd FaceNet-master/
+
+2. cd data/
+
+3. put following the resouces under the data/
+
+
+$ wget http://vis-www.cs.umass.edu/lfw/lfw-funneled.tgz
+$ tar -xvf lfw-funneled.tgz
+$ wget http://vis-www.cs.umass.edu/lfw/pairs.txt
+$ wget http://vis-www.cs.umass.edu/lfw/people.txt
+
+
+
+4. 
+cd ..
+mkdir models
+cd models
+
+wget http://dlib.net/files/shape_predictor_5_face_landmarks.dat.bz2
+tar -xvf shape_predictor_5_face_landmarks.dat.bz2
+
+wget https://github.com/foamliu/FaceNet/releases/download/v1.0/model.10-0.0156.hdf5
+
+
+5.
+
+cd ..
+  165  python lfw_eval.py
+  166  python3.6 lfw_eval.py
+  
+  167  pip3 install dlib
+  168  python3.6 lfw_eval.py
+  
+  169  pip3 install tqdm
+  170  python3.6 lfw_eval.py
+  
+ ### showing lfw accuracy: 0.6288333333333334
+ 
+ 
+ 
+ 
