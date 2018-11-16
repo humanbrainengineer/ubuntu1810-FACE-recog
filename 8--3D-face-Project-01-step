@@ -43,4 +43,12 @@ cd ..
  
  
  
+ 6.
+ 
+ cd Baidu du yun xiazai -- Anno
+ Put---  data/identity_CelebA.txt'
+ python3.6 pre_process.py
+
+
+
  
