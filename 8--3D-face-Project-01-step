@@ -62,3 +62,10 @@ python3.6 train.py
 
 
 8.
+
+python3.6 demo.py
+
+
+9.
+python3.6 data_generator.py  ----
+
