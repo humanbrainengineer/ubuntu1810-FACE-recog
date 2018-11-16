@@ -74,6 +74,12 @@ python(3.6) examples/mnist_cnn.py
 运行Keras 至少一次之后，就可以在~/.keras/keras.json 找到Keras 的配置文件。你可以编
 辑这个文件，选择运行Keras 的后端：tensorflow、theano 或cntk。你的配置文件应该是
 这样的。
+
+
+nano ~/.keras/keras.json
+
+
+
 {
 "image_data_format": "channels_last",
 "epsilon": 1e-07,
