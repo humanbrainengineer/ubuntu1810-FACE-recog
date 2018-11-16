@@ -26,6 +26,9 @@ output = tf.add_n([input1, input2], name = 'add')
 writer = tf.summary.FileWriter('/home/eth/logfile2', tf.get_default_graph())
 writer.close()
 
+
+
+
 ------------------------------------------ !!
 作者：勋仔 
 来源：CSDN 
@@ -35,5 +38,10 @@ writer.close()
 ------------------------------------------
 
 Test:
-python3 filename.py
+python(3.6) filename.py
 tensorboard --logdir=/home/eth/logfile2           //2 ge dizhi shi yi yang de.
+
+
+
+!!!! ModuleNotFoundError: No module named 'tensorflow'--------------use python3.6 command.
+
