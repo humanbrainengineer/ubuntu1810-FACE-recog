@@ -11,9 +11,10 @@ Test:
 https://blog.csdn.net/sinat_20729643/article/details/78683677
 
 
-------------------------------------------!!
+------------------------------------------@@@@@@
 Name: filename.py
 
+------------------------------------------@@@@@@  Copy！
 import tensorflow as tf
 
 # 定义一个简单的计算图，实现向量加法的操作。
@@ -26,6 +27,7 @@ output = tf.add_n([input1, input2], name = 'add')
 writer = tf.summary.FileWriter('/home/eth/logfile2', tf.get_default_graph())
 writer.close()
 
+------------------------------------------@@@@@@
 
 ！！使用以下命令行编译。
 
