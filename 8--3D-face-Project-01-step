@@ -47,8 +47,18 @@ cd ..
  
  cd Baidu du yun xiazai -- Anno
  Put---  data/identity_CelebA.txt'
- python3.6 pre_process.py
-
-
-
  
+ 
+ Put---  data/img_align_celeba.zip
+ 
+ python3.6 pre_process.py
+ 
+ 
+
+7.
+
+pip3 install imgaug 
+python3.6 train.py
+
+
+8.
