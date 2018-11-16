@@ -199,10 +199,6 @@ $ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
 $ sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
 
 
-Add:
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
-
-From :http://www.cs.virginia.edu/~mwb7w/cuda_support/libcudart.html
 
 
 第二：
@@ -237,6 +233,15 @@ sudo reboot
 or  nano ~/.bashrc
 
 插入 环境 变量：
+
+
+Add:
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+
+From :http://www.cs.virginia.edu/~mwb7w/cuda_support/libcudart.html
+
+
+
 
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64"
 export CUDA_HOME=/usr/local/cuda
