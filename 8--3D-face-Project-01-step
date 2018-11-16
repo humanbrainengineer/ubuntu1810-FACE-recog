@@ -67,5 +67,5 @@ python3.6 demo.py
 
 
 9.
-python3.6 data_generator.py  ----
+python3.6 data_generator.py  ---- 执行命令后有错误显示。
 
