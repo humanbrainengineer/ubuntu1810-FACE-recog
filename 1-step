@@ -119,6 +119,8 @@ nvidia-smi
 check version：   https://www.tensorflow.org/install/gpu    看支持的CUDA版本.  目前是cuda9.0
 ----------------------------------------------------
 
+change to gcc g++ 5.0 is necessary.!!!!!!!!!!!!!
+
 检查这个和Ubuntun 18.04上的gcc版本，我们决定降低我们的gcc版本。
 gcc --version   # check ubuntu 18.04 gcc version, you will find it's 7.3.0
 sudo apt install gcc-5 g++-5
