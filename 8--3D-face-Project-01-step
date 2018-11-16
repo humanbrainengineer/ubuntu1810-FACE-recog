@@ -21,10 +21,24 @@ cd ..
 mkdir models
 cd models
 
+
+
+shape_predictor_5_face_landmarks.dat.bz2
 wget http://dlib.net/files/shape_predictor_5_face_landmarks.dat.bz2
 tar -xvf shape_predictor_5_face_landmarks.dat.bz2
+--> showing lfw accuracy: 0.6288333333333334
+
+
+shape_predictor_68_face_landmarks.dat.bz2   
+http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
+-->  showing lfw accuracy: 0.6416666666666666
+
+
+
 
 wget https://github.com/foamliu/FaceNet/releases/download/v1.0/model.10-0.0156.hdf5
+
+
 
 
 5.
