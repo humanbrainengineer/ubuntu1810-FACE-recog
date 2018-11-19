@@ -1,0 +1,51 @@
+NO.1      pip3 install pycuda   //install all the relatived software.
+
+
+No.2       https://documen.tician.de/pycuda/index.html
+
+PyCUDA - Ubuntu14.04安装及测试
+安装
+依赖 Numpy
+直接安装
+sudo apt install python-pycuda
+1
+源码安装：
+Step 1 下载并解压 PyCUDA
+$ wget http://pypi.python.org/pypi/pycuda
+$ tar xfz pycuda-VERSION.tar.gz
+1
+2
+Step 2 编译PyCUDA
+$ cd pycuda-VERSION # if you're not there already
+$ python configure.py --cuda-root=/where/ever/you/installed/cuda
+$ su -c "make install"
+1
+2
+3
+测试
+e.g. 1
+$ cd pycuda-VERSION/test
+$ python test_driver.py
+1
+2
+输出 OK 即成功.
+
+e.g. 2
+$ cd pycuda-VERSION/examples
+$ python test_demo.py
+1
+2
+e.g. 3
+import pycuda.autoinit
+import pycuda.driver 
+
+free_bytes, total_bytes = pycuda.driver.mem_get_info() # 查询当前显卡的总显存，可用显存
+--------------------- 
+作者：AIHGF 
+来源：CSDN 
+原文：https://blog.csdn.net/zziahgf/article/details/74640889 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+
+
+
+NO.3   update the pycuda to the version of 2018.1.1. in the pycharm.
