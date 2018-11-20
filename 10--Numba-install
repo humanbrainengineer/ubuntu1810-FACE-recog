@@ -12,8 +12,6 @@ sudo -H pip3 install numba
 
 --------------------------------------
 
-pip3 install pandas
-
-sudo apt-get install python-pandas
+pip3 install pandas  or         sudo apt-get install python-pandas
 
 pip3 install parakeet
