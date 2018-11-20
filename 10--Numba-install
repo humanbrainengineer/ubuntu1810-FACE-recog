@@ -8,3 +8,10 @@ sudo apt-get install llvm
 
 sudo -H pip3 install numba
  
+
+
+--------------------------------------
+
+pip3 install pandas
+
+sudo apt-get install python-pandas
