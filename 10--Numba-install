@@ -1,0 +1,10 @@
+ubuntu18.04安装numba
+  numba可以基于llvm动态生成优化代码，提高python的执行效率，使用很方便，只需要给python代码加上修饰器就好了。 
+  由于numba依赖llvm，需要在ubuntu上事先安装好llvm。
+
+sudo apt-get install llvm
+ 
+  在ubuntu上安装numba，需要执行命令：
+
+sudo -H pip3 install numba
+ 
