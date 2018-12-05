@@ -110,6 +110,26 @@ sudo ./NVIDIA-Linux-x86_64-396.18.run –no-x-check –no-nouveau-check –no-op
 nvidia-smi
 
 
+×××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××
+驱动失效：
+sudo systemctl set-default multi-user.target
+sudo systemctl set-default graphical.target
+
+
+sudo apt-get remove --purge nvidia-*
+
+sudo ./NVIDIA-Linux-x86_64-396.18.run –no-x-check –no-nouveau-check –no-opengl-files
+
+Do not build new kernel
+
+提示gcc
+
+一直向前
+
+成功。
+
+
+
 显卡驱动到此，安装完毕。
 -------------------------------------
 
