@@ -47,3 +47,77 @@ tensorboard --logdir=/home/eth/logfile2           //2 ge dizhi shi yi yang de.
 
 !!!! ModuleNotFoundError: No module named 'tensorflow'--------------use python3.6 command.
 
+=============================================================================================
+=============================================================================================
+=============================================================================================
+2019-3-9  更新：
+
+
+pytorch上用tensorboard可视化。
+
+#先安装tensorboard插件
+
+https://github.com/TeamHG-Memex/tensorboard_logger
+
+方法一：
+
+pip install tensorboard_logger
+# 测试tensorboard
+
+from tensorboard_logger import configure, log_value
+
+configure("runs/run-1234")
+
+for step in range(1000):
+    v1, v2 = step，step
+
+    log_value('v1', v1, step)
+    log_value('v2', v2, step)
+方法二： https://github.com/lanpa/tensorboard-pytorch
+
+pip install tensorboardX
+
+
+from tensorboardX import SummaryWriter
+
+writer = SummaryWriter(“./runs”)
+
+#单变量
+
+writer.add_scalar('data/loss', loss, epoch)
+
+# 单图 多曲线（  成功的！！！  核心只利用了以下代码！！！！！！！！！！！！） 
+
+writer.add_scalar('data/x', x, epoch)writer.add_scalars('data/scalar_group', {'x': x,
+
+                                                                              'y': y, 
+
+                                                                              'loss': loss}, epoch)
+
+writer.add_text('zz/text', 'zz: this is epoch ' + str(epoch), epoch)
+
+writer.export_scalars_to_json("./test.json")
+
+writer.close()
+
+
+
+# 服务器上调用tensorboard
+
+```
+#首先使用ssh登陆服务器并转发端口
+ssh -L 16006:127.0.0.1:6006 pengyue@10.1.2.200
+```
+
+```
+#在服务器上运行tensorboard
+tensorboard --logdir=./runs
+
+#在本机地址运行
+http://127.0.0.1:16006
+```
+--------------------- 
+作者：xiepengyue666 
+来源：CSDN 
+原文：https://blog.csdn.net/xiepengyue666/article/details/80236082 
+版权声明：本文为博主原创文章，转载请附上博文链接！
