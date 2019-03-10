@@ -120,11 +120,11 @@ sudo apt-get remove --purge nvidia-*
 
 sudo ./NVIDIA-Linux-x86_64-396.18.run –no-x-check –no-nouveau-check –no-opengl-files
 
-Do not build new kernel
+1-Do not build new kernel（no register）
 
-提示gcc
+2-提示gcc  （2019年3月，这次选择忽略）
 
-一直向前
+3-  一直向前
 
 成功。
 
