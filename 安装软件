@@ -1,0 +1,13 @@
+Debian/Ubuntu: sudo apt-get install python-skimage
+
+pip3 install cmake
+pip3 install dlib
+
+pip3 --no-cache-dir install face_recognition
+pip3 install numba
+pip3 install pycuda
+pip3 install torch
+pip3 install pandas
+pip3 install tqdm
+pip3 install pretrainedmodels
+pip3 install tensorboardX
