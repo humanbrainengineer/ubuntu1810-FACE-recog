@@ -42,3 +42,36 @@ https://blog.csdn.net/qq_36396104/article/details/88805884
 python3.6 -c "import tensorflow as tf; tf.enable_eager_execution(); print(tf.reduce_sum(tf.random_normal([1000, 1000])))"
 
 //只有python3.6 可行，python3.7 不行。
+
+
+
+以下是参考：
+&&&&&&&&&&&&&&&&&&&&&&
+
+版权声明：本文为博主原创文章，未经博主允许不得转载。	https://blog.csdn.net/zxm1306192988/article/details/86545276
+使用 tensorflow
+
+报错：
+
+AttributeError: module ‘tensorflow.python.training.checkpointable’ has no attribute ‘CheckpointableBase’
+
+原因：
+升级或者安装 tensorflow 时，没有将老版本卸干净。
+
+conda uninstall tensorflow
+pip uninstall tensorflow
+conda uninstall tensorflow-gpu
+pip uninstall tensorflow-gpu
+pip uninstall tf-nightly
+1
+2
+3
+4
+5
+需要确保：import tensorflow 失败
+然后再重新安装 tensorflow
+--------------------- 
+作者：商角徵羽宫 
+来源：CSDN 
+原文：https://blog.csdn.net/zxm1306192988/article/details/86545276 
+版权声明：本文为博主原创文章，转载请附上博文链接！
