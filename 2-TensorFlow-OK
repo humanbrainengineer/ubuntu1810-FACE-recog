@@ -7,12 +7,14 @@ Check:
 
 
                                          https://www.tensorflow.org/install/pip
-then:
+then:  安装  然后看 part 1.2
 
 sudo apt update
 sudo apt install python3-dev python3-pip
 sudo pip3 install -U virtualenv  # system-wide install
 
+
+###############################################################################可以忽略
 Part 1--- Only for env
 env:
 virtualenv --system-site-packages -p python3 ./venv
@@ -21,7 +23,7 @@ source ./venv/bin/activate
 env:pip install --upgrade pip
 env:pip list
 env:deactivate
-
+###############################################################################
 
 Part 1.1 ---
 
@@ -32,7 +34,11 @@ env: python -c "import tensorflow as tf; tf.enable_eager_execution(); print(tf.r
 Part 1.2 ---    Only for system.
 
 System: 
-pip3 install --user --upgrade tensorflow-gpu  #!!! install in $HOME
+https://blog.csdn.net/qq_36396104/article/details/88805884
+
+错误的：：  pip3 install --user --upgrade tensorflow-gpu  #!!! install in $HOME
+
+应该是：  pip install tensorflow-gpu==1.7.0
 python3.6 -c "import tensorflow as tf; tf.enable_eager_execution(); print(tf.reduce_sum(tf.random_normal([1000, 1000])))"
 
 //只有python3.6 可行，python3.7 不行。
