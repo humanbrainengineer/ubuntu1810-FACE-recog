@@ -38,7 +38,7 @@ https://blog.csdn.net/qq_36396104/article/details/88805884
 
 错误的：：  pip3 install --user --upgrade tensorflow-gpu  #!!! install in $HOME
 
-应该是：  pip install tensorflow-gpu==1.7.0
+应该是：  pip install tensorflow-gpu==1.7.0   //必定是1.7 这个版本
 python3.6 -c "import tensorflow as tf; tf.enable_eager_execution(); print(tf.reduce_sum(tf.random_normal([1000, 1000])))"
 
 //只有python3.6 可行，python3.7 不行。
