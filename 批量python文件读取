@@ -1,7 +1,8 @@
-https://blog.csdn.net/xiao__run/article/details/77435131
+1--- https://blog.csdn.net/xiao__run/article/details/77435131
+     图像批量读取，批量resize，移动，复制等(opencv C++ python文件夹字典构建)
 
-图像批量读取，批量resize，移动，复制等(opencv C++ python文件夹字典构建)
 
+2---  实验成果的 代码 在 2-face-new里
 
 import cv2
 import numpy as np
