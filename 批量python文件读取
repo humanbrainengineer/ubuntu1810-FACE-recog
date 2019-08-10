@@ -1,0 +1,51 @@
+https://blog.csdn.net/xiao__run/article/details/77435131
+
+图像批量读取，批量resize，移动，复制等(opencv C++ python文件夹字典构建)
+
+
+import cv2
+import numpy as np
+import os
+fullfilename=[]
+filepath="/home/xiaorun/deeplerning/classification_keras/images/not_santa/"
+filepath1="/home/xiaorun/deeplerning/classification_keras/images/resizename"
+for filename in os.listdir(filepath):
+    print filename
+    print (os.path.join(filepath,filename))
+    filelist=os.path.join(filepath,filename)
+    fullfilename.append(filelist)
+i=1
+for imagename in fullfilename:
+    img=cv2.imread(imagename)
+    img=cv2.resize(img,(256,256))
+    resizename=str(i)+'.jpg'
+    isExists = os.path.exists(filepath1)
+    if not isExists:
+        os.makedirs(filepath1)
+        print('mkdir resizename accomploshed')
+    savename=filepath1+'/'+resizename
+    cv2.imwrite(savename,img)
+    print('{} is resized'.format(savename))
+    i=i+1
+
+--------------------- 
+版权声明：本文为CSDN博主「xiao__run」的原创文章，遵循CC 4.0 by-sa版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/xiao__run/article/details/77435131
+
+************************************重要部分
+import cv2
+import numpy as np
+import os
+fullfilename=[]
+filepath="/home/xiaorun/deeplerning/classification_keras/images/not_santa/"
+filepath1="/home/xiaorun/deeplerning/classification_keras/images/resizename"
+for filename in os.listdir(filepath):
+    print filename
+    print (os.path.join(filepath,filename))
+    filelist=os.path.join(filepath,filename)
+    fullfilename.append(filelist)
+i=1
+for imagename in fullfilename:
+************************************
+
+
