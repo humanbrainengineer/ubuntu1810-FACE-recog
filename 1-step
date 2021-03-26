@@ -56,11 +56,6 @@ sudo lsmod | grep nouveau
 
 2-step：------------- ----------------- ----------------
 
-卸载掉原有驱动
-
-sudo apt-get remove --purge nvidia-*
-
- 
 
  这一句在 ubuntu1804已经无效：CTRL + ALT + F1进入字符界面，关闭图形界面，一定要这么做，所以在驱动安装完成前，建议把以下几步记下来
 =====
@@ -96,6 +91,10 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 50
 sudo update-alternatives --config gcc
 
 //-=-=-=-=-=-=-=
+
+卸载掉原有驱动
+
+sudo apt-get remove --purge nvidia-*
 
 安装nvidia驱动，其中 -no-opengl-files 是必须的，其他两个可以不用敲
 
