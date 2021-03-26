@@ -99,8 +99,6 @@ sudo update-alternatives --config gcc
 
 安装nvidia驱动，其中 -no-opengl-files 是必须的，其他两个可以不用敲
 
-sudo apt-get install gcc g++ make
-以上没有指定版本
 
 check driver version：   https://www.nvidia.cn/Download/Find.aspx?lang=cn
 
