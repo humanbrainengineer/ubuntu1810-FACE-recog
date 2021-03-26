@@ -6,22 +6,16 @@ Tensorflow 无论什么版本，都只支持cuda9.0.      而cuda9.0 要搭配  
 ------------------------------------------------------
 
 
-
-
-一定要把移动硬盘的所有驱动软件放在 /zz
-
+1-step：一定要把移动硬盘的所有驱动软件放在 /zz
 
 
 
-
-
-1-step：------------- ----------------- ----------------
-
-2.安装驱动装备工作
+------------- ----------------- ----------------
+安装驱动装备工作  
 
  ubuntu自带的nouveau驱动会影响cuda安装，不当操作会导致黑屏和登陆循环。终端运行
 
-lsmod | grep nouveau
+lsmod | grep nouveau   //ubuntu 20.04.02 执行这个命令没有显示输出了。
 
 若有输出，则
 
@@ -33,22 +27,18 @@ sudo gedit blacklist-nouveau.conf
 
 sudo nano blacklist-nouveau.conf
 
- 
 
 在打开的文件中输入
 
- 
 
 blacklist nouveau  
 options nouveau modeset=0 
 
- 
 
 保存退出，然后
 
- 
-
 sudo update-initramfs -u
+
 
  ！@@@@@@@@@@@@@@@@@@@@@在这里，已经可以做  sudo systemctl set-default multi-user.target  这一步
 
@@ -92,7 +82,19 @@ sudo reboot
 
 sudo service lightdm stop
 
- 
+3. 
+
+如果是ubuntu20则需要把gcc版本9降为7
+https://blog.csdn.net/ashome123/article/details/105822040
+一定要先降级gcc版本再安装显卡驱动
+
+Ubuntu20.04自带的gcc版本为9.7.0，需要添加gcc7才可安装cuda10.2，输入命令安装gcc7
+
+apt-get install gcc-7 g++-7
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 100
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 50
+
+//-=-=-=-=-=-=-=
 
 安装nvidia驱动，其中 -no-opengl-files 是必须的，其他两个可以不用敲
 
