@@ -91,7 +91,6 @@ https://blog.csdn.net/ashome123/article/details/105822040
 Ubuntu20.04自带的gcc版本为9.7.0，需要添加gcc7才可安装cuda10.2，输入命令安装gcc7
 
 apt-get install gcc-7 g++-7
-sudo update-alternatives --config gcc
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 100
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 50
 sudo update-alternatives --config gcc
