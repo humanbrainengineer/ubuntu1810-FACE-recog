@@ -236,15 +236,7 @@ Install the code samples and the cuDNN Library User Guide, for example:
   sudo dpkg -i libcudnn7-doc_7.0.3.11-1+cuda9.0_amd64.deb
 
 
-Add:
 
-nano ~/.bashrc
-
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
-
-source ~/.bashrc
-
-From :http://www.cs.virginia.edu/~mwb7w/cuda_support/libcudart.html
 
 
 
@@ -269,25 +261,24 @@ sudo reboot
 
 第三：
 
-
-
-
 -----------------------
 or  nano ~/.bashrc
 
 插入 环境 变量：
 
+From :http://www.cs.virginia.edu/~mwb7w/cuda_support/libcudart.html
 
+Add:
+
+nano ~/.bashrc
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
 export CUDA_HOME=/usr/local/cuda
-
-
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64
 export PATH=$PATH:/usr/local/cuda-9.0/bin
 export CUDA_HOME=$CUDA_HOME:/usr/local/cuda-9.0
 
-之前添加过。可以添加，和第一个差不多的：  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+source ~/.bashrc
+
 
 
 --------------------- 
