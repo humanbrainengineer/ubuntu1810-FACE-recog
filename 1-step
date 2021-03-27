@@ -205,7 +205,7 @@ $ sudo ./uninstall_cuda_9.2.pl
 
 https://developer.nvidia.com/rdp/cudnn-download   
 https://developer.nvidia.com/rdp/cudnn-download#a-collapse811-111
-
+#Download cuDNN v8.1.1 (Feburary 26th, 2021), for CUDA 11.0,11.1 and 11.2
 
 version: cudnn-11.2-linux-x64-v8.1.1.33
 2.3.1. Installing from a Tar File
