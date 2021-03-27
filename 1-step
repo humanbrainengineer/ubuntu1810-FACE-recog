@@ -203,7 +203,7 @@ $ sudo ./uninstall_cuda_9.2.pl
 
 第一，安装cuDNN       
 
-https://developer.nvidia.com/rdp/cudnn-download  下载for cuda9.0
+https://developer.nvidia.com/rdp/cudnn-download   
 https://developer.nvidia.com/rdp/cudnn-download#a-collapse811-111
 
 
