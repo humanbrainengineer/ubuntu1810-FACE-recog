@@ -237,7 +237,12 @@ Install the code samples and the cuDNN Library User Guide, for example:
 
 
 Add:
+
+nano ~/.bashrc
+
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+
+source ~/.bashrc
 
 From :http://www.cs.virginia.edu/~mwb7w/cuda_support/libcudart.html
 
