@@ -207,11 +207,11 @@ https://developer.nvidia.com/rdp/cudnn-download
 https://developer.nvidia.com/rdp/cudnn-download#a-collapse811-111
 
 
-version: 7.4.1.5-1
+version: cudnn-11.2-linux-x64-v8.1.1.33
 2.3.1. Installing from a Tar File
 Navigate to your <cudnnpath> directory containing the cuDNN Tar file.
 Unzip the cuDNN package.
-$ tar -xzvf cudnn-9.0-linux-x64-v7.tgz    // 会解压出来一个 cuda 压缩包
+$ tar -xzvf cudnn-11.2-linux-x64-v8.1.1.33.tgz    // 会解压出来一个 cuda 压缩包
 Copy the following files into the CUDA Toolkit directory, and change the file permissions.
 $ sudo cp cuda/include/cudnn.h /usr/local/cuda/include
 $ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
