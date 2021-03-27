@@ -137,6 +137,10 @@ sudo ./NVIDIA-Linux-x86_64-396.18.run –no-x-check –no-nouveau-check –no-op
 
 3.  安装cuda-9.0
 check version：   https://www.tensorflow.org/install/gpu    看支持的CUDA版本.  目前是cuda9.0
+
+https://www.tensorflow.org/install/source
+https://developer.nvidia.com/cuda-toolkit-archive
+https://developer.nvidia.com/cuda-11.0-update1-download-archive?target_os=Linux #CUDA Toolkit 11.0 Update 1 Downloads
 ----------------------------------------------------
 
 change to gcc g++ 5.0 is necessary.!!!!!!!!!!!!!
