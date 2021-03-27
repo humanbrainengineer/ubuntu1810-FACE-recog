@@ -1,8 +1,13 @@
 
 Summary:
 
-Tensorflow 无论什么版本，都只支持cuda9.0.      而cuda9.0 要搭配  cudnn for cuda 9.0 的版本。
+cuda_11.0.3_450.51.06_linux.run
 
+cudnn-11.2-linux-x64-v8.1.1.33
+libcudnn8_8.1.1.33-1+cuda11.2_amd64
+libcudnn8-dev_8.1.1.33-1+cuda11.2_amd64
+libcudnn8-samples_8.1.1.33-1+cuda11.2_amd64
+# Nvidia驱动用ubuntu20.04系统自动安装的驱动 ， 版本：460.39
 ------------------------------------------------------
 
 
