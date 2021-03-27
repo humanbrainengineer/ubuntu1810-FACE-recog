@@ -156,27 +156,18 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 50   # simili
 
 本文来自 代码湾 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/B9Q8e64lO6mm/article/details/81117285?utm_source=copy 
 
-安装CUDA9.0
-check:  https://developer.nvidia.com/cuda-90-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1704&target_type=runfilelocal
+安装 CUDA Toolkit 11.0 Update 
+check:  
+https://developer.nvidia.com/cuda-11.0-update1-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=2004&target_type=runfilelocal
 
 
 进入下载的文件路径
 sudo chmod a+x cuda_9.2.88_396.26_linux
 sudo sh cuda_9.2.88_396.26_linux   or sudo ./cuda.......
-出现说明之后，按Ctrl + C键跳过，接受之后会问你是否需要安装驱动，选择无，其余选择是直至安装完成。
-!!  那个驱动选择384版本  不要装装。 之后就能装成功
-截图 summary。
 
+那个cuda包，包含了显卡驱动的版本不要装装。 之后就能装成功
+  
 
-
-补丁1~补丁4
-
-chmod 777 -R /usr/local/cuda-9.0/
-sudo chmod a+x patch1
-sudo ./cuda_9.2.88_396.26_linux-patch1-etc  or sudo ./cuda.......
-
-
-----安装结束--拍照。
 
 
 
