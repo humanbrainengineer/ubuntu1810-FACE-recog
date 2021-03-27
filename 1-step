@@ -178,6 +178,7 @@ source ~/.bashrc
 
 
 2.1 测试 cuda 样本
+##https://www.jianshu.com/p/ae22ae86cd8c
 
 sudo apt-get install cmake 
 这句不需要：  之前已经使用了g++ 5.0  sudo apt-get install g++
@@ -240,14 +241,6 @@ Install the developer library, for example:
   
 Install the code samples and the cuDNN Library User Guide, for example:
   sudo dpkg -i libcudnn8-samples_8.1.1.33-1+cuda11.2_amd64.deb
-
-
-
-  
-  
-
-
-
 
 
 
