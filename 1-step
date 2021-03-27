@@ -143,16 +143,9 @@ https://developer.nvidia.com/cuda-toolkit-archive
 https://developer.nvidia.com/cuda-11.0-update1-download-archive?target_os=Linux #CUDA Toolkit 11.0 Update 1 Downloads
 ----------------------------------------------------
 
-change to gcc g++ 5.0 is necessary.!!!!!!!!!!!!!
-
-检查这个和Ubuntun 18.04上的gcc版本，我们决定降低我们的gcc版本。
-gcc --version   # check ubuntu 18.04 gcc version, you will find it's 7.3.0
-sudo apt install gcc-5 g++-5
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 50   # you will find that message that tells you the gcc-5 is set to be automatic.
-sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 50   # similiar message as gcc
 
 -------------------------------------------------
----------------------
+ 
 
 本文来自 代码湾 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/B9Q8e64lO6mm/article/details/81117285?utm_source=copy 
 
@@ -208,7 +201,11 @@ $ sudo ./uninstall_cuda_9.2.pl
 
 4. step ---------  -----------  -----------  ----------  -----------
 
-第一，安装cuDNN       https://developer.nvidia.com/rdp/cudnn-download  下载for cuda9.0
+第一，安装cuDNN       
+
+https://developer.nvidia.com/rdp/cudnn-download  下载for cuda9.0
+https://developer.nvidia.com/rdp/cudnn-download#a-collapse811-111
+
 
 version: 7.4.1.5-1
 2.3.1. Installing from a Tar File
