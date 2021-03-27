@@ -293,10 +293,10 @@ source ~/.bashrc
 To verify that cuDNN is installed and is running properly, compile the mnistCUDNN sample located in the /usr/src/cudnn_samples_v7 directory in the debian file.
 
 Copy the cuDNN sample to a writable path.
-  $cp -r /usr/src/cudnn_samples_v7/ $HOME
+  $cp -r /usr/src/cudnn_samples_v8/ $HOME
   
 Go to the writable path.
-  $ cd  $HOME/cudnn_samples_v7/mnistCUDNN
+  $ cd  $HOME/cudnn_samples_v8/mnistCUDNN
   
 Compile the mnistCUDNN sample.  
   $make clean && make
