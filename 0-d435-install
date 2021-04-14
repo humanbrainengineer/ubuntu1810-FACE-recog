@@ -25,7 +25,7 @@ https://realsense.intel.com/sdk-2/#install
 
 
 --------------------------------------------------------------------------------------
-For Mac：
+For Mac：没有 ubuntu 的包功能全，有些属性不能使用，而ubuntu20.04可以。
 
 git clone https://github.com/IntelRealSense/librealsense
 mkdir build & cd build
